@@ -70,7 +70,7 @@ return row[-1]
 |---|---|---|
 | [Unique Paths](unique_paths.md) | Count paths for a robot on a grid (right/down only) | Full Grid, Single Row |
 | [Unique Paths with Obstacles](unique_paths_obstacles.md) | Same, but some cells are blocked | Single Array |
-| [Longest Common Subsequence](longest_common_subsequence.md) | Find the longest matching subsequence of two strings | DP Grid |
+| [Longest Common Subsequence](longest_common_subsequence.md) | Find the longest matching subsequence of two strings | Full Grid, Space-Optimized |
 
 ---
 

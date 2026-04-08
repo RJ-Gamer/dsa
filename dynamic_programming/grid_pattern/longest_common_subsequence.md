@@ -151,11 +151,15 @@ The bottom-right cell is **3**, which matches `a-c-e`.
 
 ---
 
-## The Full Code
+## Solution 1: Full Grid (O(m × n) Space)
 
 ```python
 class Solution:
-    def longest_common_subsequence(self, text1: str, text2: str) -> int:
+    def longest_common_subsequence_mxn(self, text1: str, text2: str) -> int:
+        """
+        Time: O(m × n)
+        Space: O(m × n)
+        """
         m = len(text1)
         n = len(text2)
 
@@ -177,9 +181,93 @@ class Solution:
 
 
 sol = Solution()
-print(sol.longest_common_subsequence("abcde", "ace"))        # Output: 3
-print(sol.longest_common_subsequence("september", "december"))  # Output: 6
+print(sol.longest_common_subsequence_mxn("abcde", "ace"))           # Output: 3
+print(sol.longest_common_subsequence_mxn("september", "december"))  # Output: 6
 ```
+
+---
+
+## Solution 2: Space-Optimized (O(n) Space)
+
+### The Key Insight
+
+Look at the recurrence again:
+
+```
+if match:     grid[i][j] = 1 + grid[i-1][j-1]   ← needs the row above, one column left
+else:         grid[i][j] = max(grid[i-1][j], grid[i][j-1])  ← needs the row above, same column
+```
+
+When we're filling row `i`, we only ever look at **row `i-1`** (the previous row) and the **current row so far**. We never go further back. So we don't need to keep the entire grid — just **two rows**: `prev` (the row above) and `curr` (the row we're filling right now).
+
+Think of it like updating a **two-line scoreboard**. Once you've used a line to compute the next one, you can erase it and reuse it.
+
+### How It Works
+
+```
+prev  →  [row we just finished]
+curr  →  [row we're building now]
+
+After each row: swap prev ↔ curr, then reset curr to all zeros.
+```
+
+For `"abcde"` vs `"ace"`, after processing row `a` (i=1):
+
+```
+prev = [0, 1, 1, 1]   ← result of row 'a'
+curr = [0, 0, 0, 0]   ← ready for row 'b'
+```
+
+After row `b` (i=2):
+
+```
+prev = [0, 1, 1, 1]   ← result of row 'b' (same as 'a' — no new matches)
+curr = [0, 0, 0, 0]   ← ready for row 'c'
+```
+
+After row `c` (i=3):
+
+```
+prev = [0, 1, 2, 2]   ← 'c' matched! diagonal extended to 2
+```
+
+...and so on until `prev = [0, 1, 2, 3]` after row `e`. The answer is `prev[n]` = **3**.
+
+### The Code
+
+```python
+class Solution:
+    def longest_common_subsequence_optimal(self, first: str, second: str) -> int:
+        """
+        Time: O(m × n)
+        Space: O(n)  — only two rows instead of the full grid
+        """
+        m = len(first)
+        n = len(second)
+
+        prev = [0] * (n + 1)
+        curr = [0] * (n + 1)
+
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if first[i - 1] == second[j - 1]:
+                    curr[j] = 1 + prev[j - 1]  # extend chain from diagonal
+                else:
+                    curr[j] = max(prev[j], curr[j - 1])  # borrow best from above or left
+
+            prev, curr = curr, prev   # finished this row — promote it to "prev"
+            curr = [0] * (n + 1)      # reset curr for the next row
+
+        return prev[n]   # prev holds the last completed row
+
+
+sol = Solution()
+print(sol.longest_common_subsequence_optimal("abcde", "ace"))           # Output: 3
+print(sol.longest_common_subsequence_optimal("september", "december"))  # Output: 6
+```
+
+> **Why `prev[n]` and not `curr[n]`?**
+> After the last iteration, we do `prev, curr = curr, prev` — which moves the finished row into `prev`. So the answer lives in `prev[n]`, not `curr[n]`.
 
 ---
 
@@ -190,15 +278,16 @@ print(sol.longest_common_subsequence("september", "december"))  # Output: 6
 | Letters match | Diagonal value + 1 |
 | Letters don't match | Max of above or left |
 | Either string is empty | 0 (no match possible) |
-| Final answer | Bottom-right cell of the grid |
+| Final answer (full grid) | Bottom-right cell: `grid[m][n]` |
+| Final answer (optimized) | Last element of prev row: `prev[n]` |
 
 ---
 
 ## Complexity
 
-| Type | Value | Why |
+| Solution | Time | Space |
 |---|---|---|
-| Time | O(m × n) | We visit every cell in the grid once |
-| Space | O(m × n) | We store the entire grid |
+| Full Grid | O(m × n) | O(m × n) — stores every cell |
+| Space-Optimized | O(m × n) | O(n) — only two rows at a time |
 
-Where `m` = length of `text1`, `n` = length of `text2`.
+Where `m` = length of `text1` / `first`, `n` = length of `text2` / `second`.

@@ -9,7 +9,8 @@ This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-> Changes that are in progress or planned but not yet released.
+### Added
+- `longest_common_subsequence` — space-optimized O(n) solution using two-row (`prev`/`curr`) technique
 
 ---
 

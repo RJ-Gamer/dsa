@@ -11,7 +11,8 @@ A structured, beginner-friendly guide to Dynamic Programming — explained with 
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Problems](https://img.shields.io/badge/Problems-7-orange)](./)
 [![Patterns](https://img.shields.io/badge/Patterns-2-blueviolet)](./)
-[![Stars](https://img.shields.io/github/stars/YOUR-USERNAME/YOUR-REPO?style=social)](https://github.com/YOUR-USERNAME/YOUR-REPO)
+[![Stars](https://img.shields.io/github/stars/RJ-Gamer/dsa?style=social)](https://github.com/RJ-Gamer/dsa)
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?logo=github&style=social)](https://github.com/sponsors/RJ-Gamer)
 
 </div>
 
@@ -120,7 +121,7 @@ The pattern shows up in path counting, string comparison, and any problem where 
 |---|---|---|
 | [Unique Paths](grid_pattern/unique_paths.md) | `grid[i][j] = above + left` | Easy |
 | [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Same, but blocked cells = 0 | Easy |
-| [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) | Medium |
+| [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) — Full Grid + Space-Optimized | Medium |
 
 [Explore the Grid Pattern →](grid_pattern/README.md)
 
@@ -136,7 +137,7 @@ The pattern shows up in path counting, string comparison, and any problem where 
 | 4 | [House Robber](staircase_pattern/robber.md) | Staircase | Tabulated, Space-Optimized | [.py](staircase_pattern/robber.py) |
 | 5 | [Unique Paths](grid_pattern/unique_paths.md) | Grid | Full Grid, Single Row | [.py](grid_pattern/unique_paths.py) |
 | 6 | [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Grid | Single Array | [.py](grid_pattern/unique_paths_obstacles.py) |
-| 7 | [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Grid | DP Grid | [.py](grid_pattern/longest_common_subsequence.py) |
+| 7 | [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Grid | Full Grid, Space-Optimized | [.py](grid_pattern/longest_common_subsequence.py) |
 
 ---
 
