@@ -1,0 +1,91 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyw
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+wheels/
+.eggs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyright/
+pyrightconfig.json
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ── Claude Code ─────────────────────────────────────────────────────────────
+# Personal Claude instructions — never publish (contains your private workflow)
+CLAUDE.md
+
+# Personal/local settings override — not for the team
+.claude/settings.local.json
+
+# Session cache, todos, and scratch data — ephemeral
+.claude/todos/
+.claude/cache/
+.claude/__pycache__/
+
+# ✅ DO commit these (shared with everyone who clones):
+# .claude/settings.json     ← project-wide Claude settings
+# .claude/skills/           ← project slash commands (/deploy, /explain, etc.)
+# .claude/agents/           ← custom subagent definitions
+
+# ── IDE and editor files ─────────────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# ── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Logs & temp ─────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.orig
+.cache/
+tmp/
+temp/
