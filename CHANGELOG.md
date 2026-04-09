@@ -17,6 +17,7 @@ This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 **Interval Pattern** *(new pattern)*
 - `interval_dynamic_programming/README.md` — pattern overview: interval mental model, n×n grid visualization, fill-by-length template, space optimization technique, and comparison with Grid Pattern
 - `longest_palindrome_subsequence` — Full Grid and Space-Optimized solutions; explains interval DP fill order, the outer-in matching insight, and full traces for `"bab"` and `"total"`
+- `palindromic_substrings` — 3 solutions: Memoized Recursion, Interval DP boolean table, and Expand Around Center (O(1) space); explains substring vs. subsequence distinction, why length-2 is handled separately, and full traces for `"madam"` and `"aaa"`
 
 **Grid Pattern (update)**
 - `longest_common_subsequence` — space-optimized O(n) solution using two-row (`prev`/`curr`) technique

@@ -9,7 +9,7 @@ A structured, beginner-friendly guide to Dynamic Programming — explained with 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Problems](https://img.shields.io/badge/Problems-9-orange)](./)
+[![Problems](https://img.shields.io/badge/Problems-10-orange)](./)
 [![Patterns](https://img.shields.io/badge/Patterns-3-blueviolet)](./)
 [![Stars](https://img.shields.io/github/stars/RJ-Gamer/dsa?style=social)](https://github.com/RJ-Gamer/dsa)
 [![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?logo=github&style=social)](https://github.com/sponsors/RJ-Gamer)
@@ -142,6 +142,7 @@ The pattern shows up whenever a problem involves symmetry, ranges that shrink fr
 | Problem | Core Recurrence | Difficulty |
 |---|---|---|
 | [Longest Palindromic Subsequence](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.md) | Match → inner+2, else max(skip-left, skip-right) | Medium |
+| [Palindromic Substrings](dynamic_programming/interval_dynamic_programming/palindromic_substrings.md) | `dp[i][j] = word[i]==word[j] and dp[i+1][j-1]` | Medium |
 
 [Explore the Interval Pattern →](dynamic_programming/interval_dynamic_programming/README.md)
 
@@ -160,6 +161,7 @@ The pattern shows up whenever a problem involves symmetry, ranges that shrink fr
 | 7 | [Longest Common Subsequence](dynamic_programming/grid_pattern/longest_common_subsequence.md) | Grid | Full Grid, Space-Optimized | [.py](dynamic_programming/grid_pattern/longest_common_subsequence.py) |
 | 8 | [Edit Distance](dynamic_programming/grid_pattern/min_distance.md) | Grid | Full Grid | [.py](dynamic_programming/grid_pattern/min_distance.py) |
 | 9 | [Longest Palindromic Subsequence](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.md) | Interval | Full Grid, Space-Optimized | [.py](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.py) |
+| 10 | [Palindromic Substrings](dynamic_programming/interval_dynamic_programming/palindromic_substrings.md) | Interval | Memoized Recursion, Interval DP, Expand Around Center | [.py](dynamic_programming/interval_dynamic_programming/palindromic_substrings.py) |
 
 ---
 
@@ -260,7 +262,8 @@ Use this checklist every time you see a DP problem:
     │   └── min_distance.md / .py
     └── interval_dynamic_programming/
         ├── README.md                  ← Pattern overview + when to use
-        └── longest_palindrome_subsequence.md / .py
+        ├── longest_palindrome_subsequence.md / .py
+        └── palindromic_substrings.md / .py
 ```
 
 Each problem has two files:
@@ -285,6 +288,12 @@ All contributions are welcome — especially:
 ## License
 
 [MIT](LICENSE) — free to use, share, and build on.
+
+---
+
+## Inspiration
+
+This repo was inspired by [NeetCode's Dynamic Programming playlist](https://www.youtube.com/watch?v=66hDgWottdA&t=3472s). If you want a video walkthrough alongside these written explanations, that playlist is the best companion resource.
 
 ---
 

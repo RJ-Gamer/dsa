@@ -157,6 +157,7 @@ return prev_row[n - 1]  # the last swap moved the answer into prev_row
 | Problem | Description | Solutions |
 |---|---|---|
 | [Longest Palindromic Subsequence](longest_palindrome_subsequence.md) | Longest subsequence of a string that is a palindrome | Full Grid, Space-Optimized |
+| [Palindromic Substrings](palindromic_substrings.md) | Count all contiguous substrings that are palindromes | Memoized Recursion, Interval DP, Expand Around Center |
 
 ---
 
