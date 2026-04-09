@@ -47,6 +47,7 @@ coverage.xml
 # ── Claude Code ─────────────────────────────────────────────────────────────
 # Personal Claude instructions — never publish (contains your private workflow)
 CLAUDE.md
+CREATING_A_SKILL.md
 
 # Personal/local settings override — not for the team
 .claude/settings.local.json
