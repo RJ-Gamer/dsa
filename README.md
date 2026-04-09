@@ -53,7 +53,7 @@ This guide takes a different approach:
 
 **If you're new to DP:**
 1. Read [The DP Mindset](#the-dp-mindset) below
-2. Start with the [Staircase Pattern](staircase_pattern/README.md) — it's the simplest
+2. Start with the [Staircase Pattern](dynamic_programming/staircase_pattern/README.md) — it's the simplest
 3. Work through problems in order within each pattern
 4. Read every solution variant, not just the optimal one — the journey matters
 
@@ -99,12 +99,12 @@ The pattern shows up whenever you're moving linearly through an array and making
 
 | Problem | Core Recurrence | Difficulty |
 |---|---|---|
-| [Climb Stairs](staircase_pattern/climb_stairs.md) | `dp[i] = dp[i-1] + dp[i-2]` | Easy |
-| [Tribonacci](staircase_pattern/tribonacci.md) | `dp[i] = dp[i-1] + dp[i-2] + dp[i-3]` | Easy |
-| [Min Cost Climbing Stairs](staircase_pattern/min_cost_climber.md) | `dp[i] = cost[i] + min(dp[i-1], dp[i-2])` | Easy |
-| [House Robber](staircase_pattern/robber.md) | `dp[i] = max(dp[i-1], dp[i-2] + nums[i])` | Medium |
+| [Climb Stairs](dynamic_programming/staircase_pattern/climb_stairs.md) | `dp[i] = dp[i-1] + dp[i-2]` | Easy |
+| [Tribonacci](dynamic_programming/staircase_pattern/tribonacci.md) | `dp[i] = dp[i-1] + dp[i-2] + dp[i-3]` | Easy |
+| [Min Cost Climbing Stairs](dynamic_programming/staircase_pattern/min_cost_climber.md) | `dp[i] = cost[i] + min(dp[i-1], dp[i-2])` | Easy |
+| [House Robber](dynamic_programming/staircase_pattern/robber.md) | `dp[i] = max(dp[i-1], dp[i-2] + nums[i])` | Medium |
 
-[Explore the Staircase Pattern →](staircase_pattern/README.md)
+[Explore the Staircase Pattern →](dynamic_programming/staircase_pattern/README.md)
 
 ---
 
@@ -120,12 +120,12 @@ The pattern shows up in path counting, string comparison, and any problem where 
 
 | Problem | Core Recurrence | Difficulty |
 |---|---|---|
-| [Unique Paths](grid_pattern/unique_paths.md) | `grid[i][j] = above + left` | Easy |
-| [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Same, but blocked cells = 0 | Easy |
-| [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) | Medium |
-| [Edit Distance](grid_pattern/min_distance.md) | Match → diagonal, else 1+min(diagonal, above, left) | Medium |
+| [Unique Paths](dynamic_programming/grid_pattern/unique_paths.md) | `grid[i][j] = above + left` | Easy |
+| [Unique Paths with Obstacles](dynamic_programming/grid_pattern/unique_paths_obstacles.md) | Same, but blocked cells = 0 | Easy |
+| [Longest Common Subsequence](dynamic_programming/grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) | Medium |
+| [Edit Distance](dynamic_programming/grid_pattern/min_distance.md) | Match → diagonal, else 1+min(diagonal, above, left) | Medium |
 
-[Explore the Grid Pattern →](grid_pattern/README.md)
+[Explore the Grid Pattern →](dynamic_programming/grid_pattern/README.md)
 
 ---
 
@@ -141,9 +141,9 @@ The pattern shows up whenever a problem involves symmetry, ranges that shrink fr
 
 | Problem | Core Recurrence | Difficulty |
 |---|---|---|
-| [Longest Palindromic Subsequence](interval_dynamic_programming/longest_palindrome_subsequence.md) | Match → inner+2, else max(skip-left, skip-right) | Medium |
+| [Longest Palindromic Subsequence](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.md) | Match → inner+2, else max(skip-left, skip-right) | Medium |
 
-[Explore the Interval Pattern →](interval_dynamic_programming/README.md)
+[Explore the Interval Pattern →](dynamic_programming/interval_dynamic_programming/README.md)
 
 ---
 
@@ -151,15 +151,15 @@ The pattern shows up whenever a problem involves symmetry, ranges that shrink fr
 
 | # | Problem | Pattern | Solutions | Code |
 |---|---|---|---|---|
-| 1 | [Climb Stairs](staircase_pattern/climb_stairs.md) | Staircase | Recursive, Memoized, Tabulated, Optimized | [.py](staircase_pattern/climb_stairs.py) |
-| 2 | [Tribonacci](staircase_pattern/tribonacci.md) | Staircase | Space-Optimized | [.py](staircase_pattern/tribonacci.py) |
-| 3 | [Min Cost Climbing Stairs](staircase_pattern/min_cost_climber.md) | Staircase | Tabulated, Space-Optimized | [.py](staircase_pattern/min_cost_climber.py) |
-| 4 | [House Robber](staircase_pattern/robber.md) | Staircase | Tabulated, Space-Optimized | [.py](staircase_pattern/robber.py) |
-| 5 | [Unique Paths](grid_pattern/unique_paths.md) | Grid | Full Grid, Single Row | [.py](grid_pattern/unique_paths.py) |
-| 6 | [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Grid | Single Array | [.py](grid_pattern/unique_paths_obstacles.py) |
-| 7 | [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Grid | Full Grid, Space-Optimized | [.py](grid_pattern/longest_common_subsequence.py) |
-| 8 | [Edit Distance](grid_pattern/min_distance.md) | Grid | Full Grid | [.py](grid_pattern/min_distance.py) |
-| 9 | [Longest Palindromic Subsequence](interval_dynamic_programming/longest_palindrome_subsequence.md) | Interval | Full Grid, Space-Optimized | [.py](interval_dynamic_programming/longest_palindrome_subsequence.py) |
+| 1 | [Climb Stairs](dynamic_programming/staircase_pattern/climb_stairs.md) | Staircase | Recursive, Memoized, Tabulated, Optimized | [.py](dynamic_programming/staircase_pattern/climb_stairs.py) |
+| 2 | [Tribonacci](dynamic_programming/staircase_pattern/tribonacci.md) | Staircase | Space-Optimized | [.py](dynamic_programming/staircase_pattern/tribonacci.py) |
+| 3 | [Min Cost Climbing Stairs](dynamic_programming/staircase_pattern/min_cost_climber.md) | Staircase | Tabulated, Space-Optimized | [.py](dynamic_programming/staircase_pattern/min_cost_climber.py) |
+| 4 | [House Robber](dynamic_programming/staircase_pattern/robber.md) | Staircase | Tabulated, Space-Optimized | [.py](dynamic_programming/staircase_pattern/robber.py) |
+| 5 | [Unique Paths](dynamic_programming/grid_pattern/unique_paths.md) | Grid | Full Grid, Single Row | [.py](dynamic_programming/grid_pattern/unique_paths.py) |
+| 6 | [Unique Paths with Obstacles](dynamic_programming/grid_pattern/unique_paths_obstacles.md) | Grid | Single Array | [.py](dynamic_programming/grid_pattern/unique_paths_obstacles.py) |
+| 7 | [Longest Common Subsequence](dynamic_programming/grid_pattern/longest_common_subsequence.md) | Grid | Full Grid, Space-Optimized | [.py](dynamic_programming/grid_pattern/longest_common_subsequence.py) |
+| 8 | [Edit Distance](dynamic_programming/grid_pattern/min_distance.md) | Grid | Full Grid | [.py](dynamic_programming/grid_pattern/min_distance.py) |
+| 9 | [Longest Palindromic Subsequence](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.md) | Interval | Full Grid, Space-Optimized | [.py](dynamic_programming/interval_dynamic_programming/longest_palindrome_subsequence.py) |
 
 ---
 
@@ -236,29 +236,31 @@ Use this checklist every time you see a DP problem:
 ## Repo Structure
 
 ```
-dynamic_programming/
+.
 ├── README.md                          ← You are here
 ├── CONTRIBUTING.md                    ← How to add problems or patterns
 ├── CHANGELOG.md                       ← Version history
+├── CREATING_A_SKILL.md                ← Guide to creating custom Claude skills
 ├── LICENSE                            ← MIT
 ├── .gitignore
 ├── templates/
 │   └── PROBLEM_TEMPLATE.md            ← Scaffold for new problems
-├── staircase_pattern/
-│   ├── README.md                      ← Pattern overview + when to use
-│   ├── climb_stairs.md / .py
-│   ├── min_cost_climber.md / .py
-│   ├── robber.md / .py
-│   └── tribonacci.md / .py
-├── grid_pattern/
-│   ├── README.md                      ← Pattern overview + when to use
-│   ├── unique_paths.md / .py
-│   ├── unique_paths_obstacles.md / .py
-│   ├── longest_common_subsequence.md / .py
-│   └── min_distance.md / .py
-└── interval_dynamic_programming/
-    ├── README.md                      ← Pattern overview + when to use
-    └── longest_palindrome_subsequence.md / .py
+└── dynamic_programming/
+    ├── staircase_pattern/
+    │   ├── README.md                  ← Pattern overview + when to use
+    │   ├── climb_stairs.md / .py
+    │   ├── min_cost_climber.md / .py
+    │   ├── robber.md / .py
+    │   └── tribonacci.md / .py
+    ├── grid_pattern/
+    │   ├── README.md                  ← Pattern overview + when to use
+    │   ├── unique_paths.md / .py
+    │   ├── unique_paths_obstacles.md / .py
+    │   ├── longest_common_subsequence.md / .py
+    │   └── min_distance.md / .py
+    └── interval_dynamic_programming/
+        ├── README.md                  ← Pattern overview + when to use
+        └── longest_palindrome_subsequence.md / .py
 ```
 
 Each problem has two files:

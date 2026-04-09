@@ -43,7 +43,7 @@ First off — thank you for taking the time to contribute. This guide exists to 
 Copy [`templates/PROBLEM_TEMPLATE.md`](templates/PROBLEM_TEMPLATE.md) and rename it to match your problem:
 
 ```
-cp templates/PROBLEM_TEMPLATE.md staircase_pattern/jump_game.md
+cp templates/PROBLEM_TEMPLATE.md dynamic_programming/staircase_pattern/jump_game.md
 ```
 
 ### Step 2: Fill in the template
@@ -64,7 +64,7 @@ Every problem explanation must include:
 Create a matching `.py` file with the same name:
 
 ```
-staircase_pattern/jump_game.py
+dynamic_programming/staircase_pattern/jump_game.py
 ```
 
 Requirements for the Python file:
