@@ -9,8 +9,8 @@ A structured, beginner-friendly guide to Dynamic Programming — explained with 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Problems](https://img.shields.io/badge/Problems-7-orange)](./)
-[![Patterns](https://img.shields.io/badge/Patterns-2-blueviolet)](./)
+[![Problems](https://img.shields.io/badge/Problems-9-orange)](./)
+[![Patterns](https://img.shields.io/badge/Patterns-3-blueviolet)](./)
 [![Stars](https://img.shields.io/github/stars/RJ-Gamer/dsa?style=social)](https://github.com/RJ-Gamer/dsa)
 [![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?logo=github&style=social)](https://github.com/sponsors/RJ-Gamer)
 
@@ -39,6 +39,7 @@ This guide takes a different approach:
 - [Patterns](#patterns)
   - [Staircase Pattern](#-staircase-pattern)
   - [Grid Pattern](#-grid-pattern)
+  - [Interval Pattern](#-interval-pattern)
 - [Problem Index](#problem-index)
 - [The Optimization Journey](#the-optimization-journey)
 - [How to Approach Any DP Problem](#how-to-approach-any-dp-problem)
@@ -121,9 +122,28 @@ The pattern shows up in path counting, string comparison, and any problem where 
 |---|---|---|
 | [Unique Paths](grid_pattern/unique_paths.md) | `grid[i][j] = above + left` | Easy |
 | [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Same, but blocked cells = 0 | Easy |
-| [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) — Full Grid + Space-Optimized | Medium |
+| [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Match → diagonal+1, else max(above, left) | Medium |
+| [Edit Distance](grid_pattern/min_distance.md) | Match → diagonal, else 1+min(diagonal, above, left) | Medium |
 
 [Explore the Grid Pattern →](grid_pattern/README.md)
+
+---
+
+### 🔁 Interval Pattern
+
+**The idea:** Solve a problem on a single string by expanding from smaller substrings to larger ones. Each cell `dp[i][j]` is the answer for the substring `s[i..j]`.
+
+```
+dp[i][j] = f(dp[i+1][j-1], dp[i+1][j], dp[i][j-1])
+```
+
+The pattern shows up whenever a problem involves symmetry, ranges that shrink from both ends, or combining answers from subintervals.
+
+| Problem | Core Recurrence | Difficulty |
+|---|---|---|
+| [Longest Palindromic Subsequence](interval_dynamic_programming/longest_palindrome_subsequence.md) | Match → inner+2, else max(skip-left, skip-right) | Medium |
+
+[Explore the Interval Pattern →](interval_dynamic_programming/README.md)
 
 ---
 
@@ -138,6 +158,8 @@ The pattern shows up in path counting, string comparison, and any problem where 
 | 5 | [Unique Paths](grid_pattern/unique_paths.md) | Grid | Full Grid, Single Row | [.py](grid_pattern/unique_paths.py) |
 | 6 | [Unique Paths with Obstacles](grid_pattern/unique_paths_obstacles.md) | Grid | Single Array | [.py](grid_pattern/unique_paths_obstacles.py) |
 | 7 | [Longest Common Subsequence](grid_pattern/longest_common_subsequence.md) | Grid | Full Grid, Space-Optimized | [.py](grid_pattern/longest_common_subsequence.py) |
+| 8 | [Edit Distance](grid_pattern/min_distance.md) | Grid | Full Grid | [.py](grid_pattern/min_distance.py) |
+| 9 | [Longest Palindromic Subsequence](interval_dynamic_programming/longest_palindrome_subsequence.md) | Interval | Full Grid, Space-Optimized | [.py](interval_dynamic_programming/longest_palindrome_subsequence.py) |
 
 ---
 
@@ -228,11 +250,15 @@ dynamic_programming/
 │   ├── min_cost_climber.md / .py
 │   ├── robber.md / .py
 │   └── tribonacci.md / .py
-└── grid_pattern/
+├── grid_pattern/
+│   ├── README.md                      ← Pattern overview + when to use
+│   ├── unique_paths.md / .py
+│   ├── unique_paths_obstacles.md / .py
+│   ├── longest_common_subsequence.md / .py
+│   └── min_distance.md / .py
+└── interval_dynamic_programming/
     ├── README.md                      ← Pattern overview + when to use
-    ├── unique_paths.md / .py
-    ├── unique_paths_obstacles.md / .py
-    └── longest_common_subsequence.md / .py
+    └── longest_palindrome_subsequence.md / .py
 ```
 
 Each problem has two files:
