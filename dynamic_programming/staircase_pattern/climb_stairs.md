@@ -247,3 +247,13 @@ print(sol.climbStairsMemoized(8))     # 34
 print(sol.climbStairsTabulated(8))    # 34
 print(sol.climbStairsOptimized(8))    # 34
 ```
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #70](https://leetcode.com/problems/climbing-stairs/) | Climbing Stairs | Easy |
+
+> This problem is part of the **Blind 75** and **NeetCode 150** interview prep lists.

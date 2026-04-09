@@ -570,3 +570,13 @@ print(sol.longest_palindrome_subsequence_optimized("loop"))   # Output: 2
 Where `n` = length of `word`.
 
 > Time remains O(n²) in both solutions because we still visit every cell in the upper triangle exactly once. Space improves from O(n²) to O(n) by keeping only two rows.
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #516](https://leetcode.com/problems/longest-palindromic-subsequence/) | Longest Palindromic Subsequence | Medium |
+
+> This problem is part of the **NeetCode 150** interview prep list.

@@ -234,3 +234,13 @@ print(sol.unique_paths_brute_force(3, 2))   # 3
 print(sol.unique_paths_single_row(3, 7))    # 28
 print(sol.unique_paths_single_row(3, 2))    # 3
 ```
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #62](https://leetcode.com/problems/unique-paths/) | Unique Paths | Medium |
+
+> This problem is part of the **Blind 75** and **NeetCode 150** interview prep lists.

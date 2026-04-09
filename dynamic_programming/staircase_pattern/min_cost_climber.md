@@ -173,3 +173,13 @@ sol = Solution()
 print(sol.min_cost_climber([10, 15, 20, 4, 6, 8]))           # 25
 print(sol.min_cost_climber_tabulated([10, 15, 20, 4, 6, 8])) # 25
 ```
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #746](https://leetcode.com/problems/min-cost-climbing-stairs/) | Min Cost Climbing Stairs | Easy |
+
+> This problem is part of the **NeetCode 150** interview prep list.

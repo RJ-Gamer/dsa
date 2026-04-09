@@ -200,3 +200,13 @@ The difference is just **what** that function `f` does:
 - House Robber: `f = max(prev2, prev1 + nums[i])` (pick the better option)
 
 Both reduce to O(1) space with the same two-variable sliding window trick.
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #198](https://leetcode.com/problems/house-robber/) | House Robber | Medium |
+
+> This problem is part of the **Blind 75** and **NeetCode 150** interview prep lists.

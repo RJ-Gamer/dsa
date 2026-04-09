@@ -125,3 +125,11 @@ print(sol.tribonacci(4))   # 4
 print(sol.tribonacci(5))   # 7
 print(sol.tribonacci(25))  # 1389537
 ```
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #1137](https://leetcode.com/problems/n-th-tribonacci-number/) | N-th Tribonacci Number | Easy |

@@ -194,3 +194,13 @@ Where `m` = number of rows, `n` = number of columns.
 | First row init | All 1s | 1 until first obstacle, then 0 |
 | Obstacle cells | Don't exist | Set to 0 immediately |
 | Logic change | Minimal | Add an `if obstacle → 0` check |
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #63](https://leetcode.com/problems/unique-paths-ii/) | Unique Paths II | Medium |
+
+> This problem is part of the **NeetCode 150** interview prep list.

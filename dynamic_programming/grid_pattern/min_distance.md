@@ -457,3 +457,13 @@ print(sol.min_distance("intention", "execution"))  # Output: 5
 | Space | O(m × n) | We store the entire grid |
 
 Where `m` = length of `first_word`, `n` = length of `second_word`.
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #72](https://leetcode.com/problems/edit-distance/) | Edit Distance | Medium |
+
+> This problem is part of the **Blind 75** and **NeetCode 150** interview prep lists.

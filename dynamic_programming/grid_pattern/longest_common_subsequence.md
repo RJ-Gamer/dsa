@@ -291,3 +291,13 @@ print(sol.longest_common_subsequence_optimal("september", "december"))  # Output
 | Space-Optimized | O(m × n) | O(n) — only two rows at a time |
 
 Where `m` = length of `text1` / `first`, `n` = length of `text2` / `second`.
+
+---
+
+## Where to Practice
+
+| Platform | Problem | Difficulty |
+|---|---|---|
+| [LeetCode #1143](https://leetcode.com/problems/longest-common-subsequence/) | Longest Common Subsequence | Medium |
+
+> This problem is part of the **Blind 75** and **NeetCode 150** interview prep lists.
